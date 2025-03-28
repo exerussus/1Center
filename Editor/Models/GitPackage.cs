@@ -37,6 +37,13 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor.Models
             
             PackageAutoInstaller.InstallNuGetForUnity();
         }
+
+        public void RecognizeInstallation(string manifestText)
+        {
+            var packageSymbol = $"MyPackage.{PackageName}";
+            IsInstalled = manifestText.Contains($"\"{PackageName}\"");
+            EditorPrefs.SetBool(packageSymbol, IsInstalled);
+        }
         
         public void UpdateInstalledState() => IsInstalled = EditorPrefs.GetBool($"MyPackage.{PackageName}");
     }

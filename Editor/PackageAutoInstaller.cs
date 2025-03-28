@@ -11,7 +11,7 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
         public static string PackageName { get; set; }
         public static string PackageUrl { get; set; }
         public static string ManifestPath  { get; set; }
-
+        
         public static void InstallNuGetForUnity()
         {
             if (string.IsNullOrEmpty(PackageName)) return;

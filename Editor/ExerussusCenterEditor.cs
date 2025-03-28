@@ -1,6 +1,7 @@
 ﻿#if UNITY_EDITOR
 
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Exerussus._1Extensions.ExtensionEditor.Editor.Models;
 using UnityEditor;
@@ -37,6 +38,7 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
                 new GitPackage("SpaceHash", "com.exerussus.ecsmodule.spacehash", "https://github.com/exerussus/ecsmodule-spacehash.git", "Easy Ecs"),
                 new GitPackage("Health", "com.exerussus.ecsmodule.health", "https://github.com/exerussus/ecsmodule-health.git", "Easy Ecs"),
             };
+            RecognizeInstallation();
         }
 
         protected void OnGUI()
@@ -73,6 +75,19 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
             GUI.backgroundColor = Color.white;
         }
 
+        private static void RecognizeInstallation()
+        {
+            if (_packages.Count == 0) return;
+
+            var manifestFullPath = Path.Combine(Application.dataPath, "../", PackageConstants.ManifestPath);
+            
+            var jsonText = File.ReadAllText(manifestFullPath);
+            
+            foreach (var gitPackage in _packages)
+            {
+                gitPackage.RecognizeInstallation(jsonText);
+            }
+        }
 
         public static void UpVersion()
         {
