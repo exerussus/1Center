@@ -12,30 +12,12 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
         public static string PackageUrl { get; set; }
         public static string ManifestPath  { get; set; }
 
-        static PackageAutoInstaller()
-        {
-            InstallNuGetForUnity();
-        }
-
         public static void InstallNuGetForUnity()
         {
-            if (string.IsNullOrEmpty(PackageName))
-            {
-                Debug.LogError("PackageName is null or empty.");
-                return;
-            }
+            if (string.IsNullOrEmpty(PackageName)) return;
+            if (string.IsNullOrEmpty(PackageUrl)) return;
+            if (string.IsNullOrEmpty(ManifestPath)) return;
             
-            if (string.IsNullOrEmpty(PackageUrl))
-            {
-                Debug.LogError("PackageUrl is null or empty.");
-                return;
-            }
-            
-            if (string.IsNullOrEmpty(ManifestPath))
-            {
-                Debug.LogError("ManifestPath is null or empty.");
-                return;
-            }
             
             string manifestFullPath = Path.Combine(Application.dataPath, "../", ManifestPath);
 
