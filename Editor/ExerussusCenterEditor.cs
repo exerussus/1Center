@@ -23,6 +23,7 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
 
         private static void InitPackages()
         {
+            Debug.Log("Updated packages");
             _packages = new()
             {
                 new GitPackage("NuGet", "com.github-glitchenzo.nugetforunity", "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity"),
