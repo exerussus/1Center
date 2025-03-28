@@ -19,6 +19,24 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
 
         public static void InstallNuGetForUnity()
         {
+            if (string.IsNullOrEmpty(PackageName))
+            {
+                Debug.LogError("PackageName is null or empty.");
+                return;
+            }
+            
+            if (string.IsNullOrEmpty(PackageUrl))
+            {
+                Debug.LogError("PackageUrl is null or empty.");
+                return;
+            }
+            
+            if (string.IsNullOrEmpty(ManifestPath))
+            {
+                Debug.LogError("ManifestPath is null or empty.");
+                return;
+            }
+            
             string manifestFullPath = Path.Combine(Application.dataPath, "../", ManifestPath);
 
             if (!File.Exists(manifestFullPath))
