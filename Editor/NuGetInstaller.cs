@@ -37,6 +37,10 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
                 EditorPrefs.SetBool(packageSymbol, true);
                 return;
             }
+            else
+            {
+                EditorPrefs.SetBool(packageSymbol, false);
+            }
 
             // Ищем место, где добавляются зависимости
             int dependenciesIndex = jsonText.IndexOf("\"dependencies\": {");
