@@ -1,0 +1,20 @@
+{
+  "name": "com.exerussus.1center",
+  "version": "1.0.0",
+  "displayName": "1Center",
+  "description": "Инструмент для быстрой установки инструментов.",
+  "unity": "2020.3",
+  "dependencies": {},
+  "keywords": [
+    "1center",
+    "exerussus"
+  ],
+  "author": {
+    "name": "Exerussus",
+    "email": "solovyov.production@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exerussus/1Center.git"
+  }
+}
