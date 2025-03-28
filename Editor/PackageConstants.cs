@@ -3,25 +3,5 @@
     public static class PackageConstants
     {
         public const string ManifestPath = "Packages/manifest.json";
-        
-        public static class Name
-        {
-            public const string NuGet = "com.github-glitchenzo.nugetforunity";
-            public const string OneExtensions = "com.exerussus.1extensions";
-            public const string EcsLite = "com.leopotam.ecslite";
-            public const string EcsLiteEditor = "com.leopotam.ecslite.unityeditor";
-            public const string OneEasyEcs = "com.exerussus.1easyecs";
-            public const string OneOrganizerUi = "com.exerussus.1organizer-ui";
-        }
-        
-        public static class Url
-        {
-            public const string NuGet = "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity";
-            public const string OneExtensions = "https://github.com/exerussus/1Extensions.git";
-            public const string EcsLite = "https://github.com/Leopotam/ecslite.git";
-            public const string EcsLiteEditor = "https://github.com/Leopotam/ecslite-unityeditor.git";
-            public const string OneEasyEcs = "https://github.com/exerussus/1EasyEcs.git";
-            public const string OneOrganizerUi = "https://github.com/exerussus/1organizer-ui.git";
-        }
     }
 }

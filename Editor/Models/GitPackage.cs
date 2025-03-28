@@ -1,5 +1,4 @@
 ﻿using System;
-using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 
@@ -8,11 +7,12 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor.Models
     [Serializable]
     public class GitPackage
     {
-        public GitPackage(string name, string packageName, string url)
+        public GitPackage(string name, string packageName, string url, string group = "Base")
         {
             Name = name;
             PackageName = packageName;
             Url = url;
+            Group = group;
             UpdateInstalledState();
         }
 
@@ -22,6 +22,7 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor.Models
         public string Name { get; private set; }
         public string PackageName { get; private set; }
         public string Url { get; private set; }
+        public string Group { get; private set; }
         public bool IsInstalled { get; private set; }
 
         public Color GetColor() => EditorPrefs.GetBool($"MyPackage.{PackageName}") ? OnColor : OffColor;
