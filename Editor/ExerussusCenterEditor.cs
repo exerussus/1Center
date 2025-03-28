@@ -14,7 +14,7 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
             GetWindow<ExerussusCenterEditor>("Exerussus Center");
         }
         
-        [Button("Install NuGet")]
+        [FoldoutGroup("Base"), Button("Install NuGet")]
         public void InstallNuGet()
         {
             PackageAutoInstaller.PackageName = PackageConstants.Name.NuGet;
@@ -24,7 +24,7 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
             PackageAutoInstaller.InstallNuGetForUnity();
         }
         
-        [Button("Install 1Extensions")]
+        [FoldoutGroup("Base"), Button("Install 1Extensions")]
         public void Install1Extensions()
         {
             PackageAutoInstaller.PackageName = PackageConstants.Name.OneExtensions;
@@ -34,11 +34,31 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
             PackageAutoInstaller.InstallNuGetForUnity();
         }
         
-        [Button("Install EcsLite")]
+        [FoldoutGroup("Base"), Button("Install EcsLite")]
         public void InstallEcsLite()
         {
             PackageAutoInstaller.PackageName = PackageConstants.Name.EcsLite;
             PackageAutoInstaller.PackageUrl = PackageConstants.Url.EcsLite;
+            PackageAutoInstaller.ManifestPath = PackageConstants.ManifestPath;
+            
+            PackageAutoInstaller.InstallNuGetForUnity();
+        }
+        
+        [FoldoutGroup("Base"), Button("Install 1Organizer-Ui")]
+        public void InstallOneOrganizerUi()
+        {
+            PackageAutoInstaller.PackageName = PackageConstants.Name.OneOrganizerUi;
+            PackageAutoInstaller.PackageUrl = PackageConstants.Url.OneOrganizerUi;
+            PackageAutoInstaller.ManifestPath = PackageConstants.ManifestPath;
+            
+            PackageAutoInstaller.InstallNuGetForUnity();
+        }
+        
+        [FoldoutGroup("EasyEcs"), Button("Install Core")]
+        public void InstallEasyEcs()
+        {
+            PackageAutoInstaller.PackageName = PackageConstants.Name.OneEasyEcs;
+            PackageAutoInstaller.PackageUrl = PackageConstants.Url.OneEasyEcs;
             PackageAutoInstaller.ManifestPath = PackageConstants.ManifestPath;
             
             PackageAutoInstaller.InstallNuGetForUnity();
