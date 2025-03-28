@@ -1,68 +1,64 @@
 ﻿#if UNITY_EDITOR
 
-using Sirenix.OdinInspector;
-using Sirenix.OdinInspector.Editor;
+using System.Collections.Generic;
+using Exerussus._1Extensions.ExtensionEditor.Editor.Models;
+
 using UnityEditor;
+using UnityEngine;
 
 namespace Exerussus._1Extensions.ExtensionEditor.Editor
 {
-    public class ExerussusCenterEditor : OdinEditorWindow
+    public class ExerussusCenterEditor : EditorWindow
     {
+        private static List<GitPackage> _packages = new List<GitPackage>();
+        public static int CenterUpdateVersion { get; private set; }
+        
         [MenuItem("Tools/Exerussus/ExerussusCenter")]
         private static void OpenWindow()
         {
+            InitPackages();
             GetWindow<ExerussusCenterEditor>("Exerussus Center");
         }
-        
-        [FoldoutGroup("Base"), Button("Install NuGet")]
-        public void InstallNuGet()
+
+        private static void InitPackages()
         {
-            PackageAutoInstaller.PackageName = PackageConstants.Name.NuGet;
-            PackageAutoInstaller.PackageUrl = PackageConstants.Url.NuGet;
-            PackageAutoInstaller.ManifestPath = PackageConstants.ManifestPath;
-            
-            PackageAutoInstaller.InstallNuGetForUnity();
+            _packages = new()
+            {
+                new GitPackage("NuGet", "com.github-glitchenzo.nugetforunity", "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity"),
+                new GitPackage("1Extensions", "com.exerussus.1extensions", "https://github.com/exerussus/1Extensions.git"),
+                new GitPackage("EcsLite", "com.leopotam.ecslite", "https://github.com/Leopotam/ecslite.git"),
+                new GitPackage("1EasyEcs", "com.exerussus.1easyecs", "https://github.com/exerussus/1EasyEcs.git"),
+                new GitPackage("1Attributes", "com.exerussus.1attributes", "https://github.com/exerussus/1Attributes.git"),
+                new GitPackage("1OrganizerUI", "com.exerussus.1organizer-ui", "https://github.com/exerussus/1OrganizerUI.git")
+            };
         }
         
-        [FoldoutGroup("Base"), Button("Install 1Extensions")]
-        public void Install1Extensions()
+        protected void OnGUI()
         {
-            PackageAutoInstaller.PackageName = PackageConstants.Name.OneExtensions;
-            PackageAutoInstaller.PackageUrl = PackageConstants.Url.OneExtensions;
-            PackageAutoInstaller.ManifestPath = PackageConstants.ManifestPath;
+            if (_packages.Count == 0) InitPackages();
             
-            PackageAutoInstaller.InstallNuGetForUnity();
+            foreach (var gitPackage in _packages)
+            {
+                GUI.backgroundColor = gitPackage.GetColor();
+                if (GUILayout.Button(gitPackage.GetInstallDescription()))
+                {
+                    gitPackage.InstallPackage();
+                }
+            }
+            
+            GUI.backgroundColor = Color.white;
+        }
+
+        public static void UpVersion()
+        {
+            CenterUpdateVersion++;
+            
+            foreach (var gitPackage in _packages)
+            {
+                gitPackage.UpdateInstalledState();
+            }
         }
         
-        [FoldoutGroup("Base"), Button("Install EcsLite")]
-        public void InstallEcsLite()
-        {
-            PackageAutoInstaller.PackageName = PackageConstants.Name.EcsLite;
-            PackageAutoInstaller.PackageUrl = PackageConstants.Url.EcsLite;
-            PackageAutoInstaller.ManifestPath = PackageConstants.ManifestPath;
-            
-            PackageAutoInstaller.InstallNuGetForUnity();
-        }
-        
-        [FoldoutGroup("Base"), Button("Install 1Organizer-Ui")]
-        public void InstallOneOrganizerUi()
-        {
-            PackageAutoInstaller.PackageName = PackageConstants.Name.OneOrganizerUi;
-            PackageAutoInstaller.PackageUrl = PackageConstants.Url.OneOrganizerUi;
-            PackageAutoInstaller.ManifestPath = PackageConstants.ManifestPath;
-            
-            PackageAutoInstaller.InstallNuGetForUnity();
-        }
-        
-        [FoldoutGroup("EasyEcs"), Button("Install Core")]
-        public void InstallEasyEcs()
-        {
-            PackageAutoInstaller.PackageName = PackageConstants.Name.OneEasyEcs;
-            PackageAutoInstaller.PackageUrl = PackageConstants.Url.OneEasyEcs;
-            PackageAutoInstaller.ManifestPath = PackageConstants.ManifestPath;
-            
-            PackageAutoInstaller.InstallNuGetForUnity();
-        }
     }
 }
 

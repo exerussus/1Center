@@ -64,6 +64,7 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
 
             // Перезагружаем зависимости UPM
             EditorPrefs.SetBool(packageSymbol, true);
+            ExerussusCenterEditor.UpVersion();
             AssetDatabase.Refresh();
             EditorApplication.ExecuteMenuItem("Assets/Refresh");
         }
