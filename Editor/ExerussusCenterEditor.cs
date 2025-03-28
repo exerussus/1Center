@@ -29,7 +29,7 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
             {
                 new GitPackage("NuGet", "com.github-glitchenzo.nugetforunity", "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity"),
                 new GitPackage("1Extensions", "com.exerussus.1extensions", "https://github.com/exerussus/1Extensions.git"),
-                new GitPackage("1OrganizerUI", "com.exerussus.1organizer-ui", "https://github.com/exerussus/1OrganizerUI.git"),
+                new GitPackage("1OrganizerUI", "com.exerussus.1organizer-ui", "https://github.com/exerussus/1organizer-ui.git"),
                 new GitPackage("EcsLite", "com.leopotam.ecslite", "https://github.com/Leopotam/ecslite.git"),
                 new GitPackage("EcsLiteEditor", "com.leopotam.ecslite.unityeditor", "https://github.com/Leopotam/ecslite-unityeditor.git"),
                 new GitPackage("1EasyEcs", "com.exerussus.1easyecs", "https://github.com/exerussus/1EasyEcs.git", "Easy Ecs"),
