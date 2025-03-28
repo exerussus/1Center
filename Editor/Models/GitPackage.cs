@@ -26,7 +26,7 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor.Models
         public bool IsInstalled { get; private set; }
 
         public Color GetColor() => EditorPrefs.GetBool($"MyPackage.{PackageName}") ? OnColor : OffColor;
-        public string GetInstallDescription() => $"Install {Name}"; // $"Uninstall {Name}"
+        public string GetInstallDescription() => IsInstalled ? Name : $"Install {Name}"; // $"Uninstall {Name}"
         
         // [Button("GetInstallDescription"), GUIColor("GetColor")]
         public void InstallPackage()
