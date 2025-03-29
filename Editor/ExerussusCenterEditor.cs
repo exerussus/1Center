@@ -34,6 +34,7 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
                 new GitPackage("EcsLiteEditor", "com.leopotam.ecslite.unityeditor", "https://github.com/Leopotam/ecslite-unityeditor.git"),
                 new GitPackage("1EasyEcs", "com.exerussus.1easyecs", "https://github.com/exerussus/1EasyEcs.git", "Easy Ecs"),
                 new GitPackage("NetworkTools", "com.exerussus.easyecs.networktools", "https://github.com/exerussus/EasyEcsNetworkTools.git", "Easy Ecs"),
+                new GitPackage("Basic Data", "com.exerussus.basicdata", "https://github.com/exerussus/BasicData.git", "Easy Ecs"),
                 new GitPackage("Movement", "com.exerussus.ecsmodule.movement", "https://github.com/exerussus/ecsmodule-movement.git", "Easy Ecs"),
                 new GitPackage("SpaceHash", "com.exerussus.ecsmodule.spacehash", "https://github.com/exerussus/ecsmodule-spacehash.git", "Easy Ecs"),
                 new GitPackage("Health", "com.exerussus.ecsmodule.health", "https://github.com/exerussus/ecsmodule-health.git", "Easy Ecs"),
