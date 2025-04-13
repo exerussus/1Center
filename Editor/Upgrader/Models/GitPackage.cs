@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -48,3 +49,4 @@ namespace Plugins.Exerussus._1Center.Editor.Upgrader.Models
         public void UpdateInstalledState() => IsInstalled = EditorPrefs.GetBool($"MyPackage.{PackageName}");
     }
 }
+#endif
