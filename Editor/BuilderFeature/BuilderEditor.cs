@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿#if UNITY_EDITOR
+using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
@@ -149,3 +150,5 @@ namespace Plugins.Exerussus._1Center.Editor.BuilderFeature
         }
     }
 }
+
+#endif

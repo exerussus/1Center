@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 using UnityEngine;
 
 namespace Plugins.Exerussus._1Center.Editor.BuilderFeature
@@ -41,3 +42,4 @@ namespace Plugins.Exerussus._1Center.Editor.BuilderFeature
         }
     }
 }
+#endif
