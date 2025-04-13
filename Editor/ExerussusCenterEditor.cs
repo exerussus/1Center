@@ -38,6 +38,7 @@ namespace Exerussus._1Extensions.ExtensionEditor.Editor
                 new GitPackage("Movement", "com.exerussus.ecsmodule.movement", "https://github.com/exerussus/ecsmodule-movement.git", "Easy Ecs"),
                 new GitPackage("SpaceHash", "com.exerussus.ecsmodule.spacehash", "https://github.com/exerussus/ecsmodule-spacehash.git", "Easy Ecs"),
                 new GitPackage("Health", "com.exerussus.ecsmodule.health", "https://github.com/exerussus/ecsmodule-health.git", "Easy Ecs"),
+                new GitPackage("Cartoon Characters", "com.exerussus.ecsmodule.cartooncharacters", "https://github.com/exerussus/ecsmodule-cartooncharacters.git", "Easy Ecs"),
             };
             RecognizeInstallation();
         }
