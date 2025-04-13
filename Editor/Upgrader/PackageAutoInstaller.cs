@@ -4,7 +4,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace Exerussus._1Extensions.ExtensionEditor.Editor
+namespace Plugins.Exerussus._1Center.Editor.Upgrader
 {
     public static class PackageAutoInstaller
     {

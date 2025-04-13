@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Exerussus._1Extensions.ExtensionEditor.Editor.Models
+namespace Plugins.Exerussus._1Center.Editor.Upgrader.Models
 {
     [Serializable]
     public class GitPackage

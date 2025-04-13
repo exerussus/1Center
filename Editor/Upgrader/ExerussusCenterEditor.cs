@@ -3,11 +3,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Exerussus._1Extensions.ExtensionEditor.Editor.Models;
+using Plugins.Exerussus._1Center.Editor.Upgrader.Models;
 using UnityEditor;
 using UnityEngine;
 
-namespace Exerussus._1Extensions.ExtensionEditor.Editor
+namespace Plugins.Exerussus._1Center.Editor.Upgrader
 {
     public class ExerussusCenterEditor : EditorWindow
     {
