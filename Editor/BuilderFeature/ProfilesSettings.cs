@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿#if UNITY_EDITOR
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Plugins.Exerussus._1Center.Editor.BuilderFeature
@@ -8,3 +9,4 @@ namespace Plugins.Exerussus._1Center.Editor.BuilderFeature
         public List<Profile> profiles;
     }
 }
+#endif

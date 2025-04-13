@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 
@@ -12,3 +13,4 @@ namespace Plugins.Exerussus._1Center.Editor.BuilderFeature
         public List<string> symbols;
     }
 }
+#endif
