@@ -41,6 +41,7 @@ namespace Plugins.Exerussus._1Center.Editor.Upgrader
                 new GitPackage("SpaceHash", "com.exerussus.ecsmodule.spacehash", "https://github.com/exerussus/ecsmodule-spacehash.git", "Easy Ecs"),
                 new GitPackage("Health", "com.exerussus.ecsmodule.health", "https://github.com/exerussus/ecsmodule-health.git", "Easy Ecs"),
                 new GitPackage("Cartoon Characters", "com.exerussus.ecsmodule.cartooncharacters", "https://github.com/exerussus/ecsmodule-cartooncharacters.git", "Easy Ecs"),
+                new GitPackage("FishNet Authenticator", "com.exerussus.service.fishnet.authenticator", "https://github.com/exerussus/1ServiceFishnetAuthenticator.git", "Services"),
             };
             RecognizeInstallation();
         }
