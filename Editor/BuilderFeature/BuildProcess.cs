@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace Plugins.Exerussus._1Center.Editor.BuilderFeature
+namespace Exerussus._1Center.Editor.BuilderFeature
 {
     public static class BuildProcess
     {

@@ -1,5 +1,5 @@
 ﻿#if UNITY_EDITOR
-namespace Plugins.Exerussus._1Center.Editor.Upgrader
+namespace Exerussus._1Center.Editor.Upgrader
 {
     public static class PackageConstants
     {

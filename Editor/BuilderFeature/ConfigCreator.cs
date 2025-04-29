@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Plugins.Exerussus._1Center.Editor.BuilderFeature
+namespace Exerussus._1Center.Editor.BuilderFeature
 {
     [InitializeOnLoad]
     public static class ConfigCreator

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Plugins.Exerussus._1Center.Editor.BuilderFeature
+namespace Exerussus._1Center.Editor.BuilderFeature
 {
     public class ProfilesSettings : ScriptableObject
     {

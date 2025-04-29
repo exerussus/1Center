@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEditor;
 
-namespace Plugins.Exerussus._1Center.Editor.BuilderFeature
+namespace Exerussus._1Center.Editor.BuilderFeature
 {
     [Serializable]
     public class Profile
