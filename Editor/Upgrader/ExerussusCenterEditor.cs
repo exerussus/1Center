@@ -30,11 +30,13 @@ namespace Exerussus._1Center.Editor.Upgrader
             {
                 new GitPackage("NuGet", "com.github-glitchenzo.nugetforunity", "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity"),
                 new GitPackage("1Extensions", "com.exerussus.1extensions", "https://github.com/exerussus/1Extensions.git"),
+                new GitPackage("LitMotion", "com.annulusgames.lit-motion", "https://github.com/annulusgames/LitMotion.git?path=src/LitMotion/Assets/LitMotion"),
                 new GitPackage("1OrganizerUI", "com.exerussus.1organizer-ui", "https://github.com/exerussus/1organizer-ui.git"),
                 new GitPackage("1Services", "com.exerussus.1services", "https://github.com/exerussus/1services.git"),
                 new GitPackage("EcsLite", "com.leopotam.ecslite", "https://github.com/Leopotam/ecslite.git"),
                 new GitPackage("EcsLiteEditor", "com.leopotam.ecslite.unityeditor", "https://github.com/Leopotam/ecslite-unityeditor.git"),
                 new GitPackage("1EasyEcs", "com.exerussus.1easyecs", "https://github.com/exerussus/1EasyEcs.git", "Easy Ecs"),
+                new GitPackage("EcsUI", "com.exerussus.ecsui", "https://github.com/exerussus/ecsui.git", "Easy Ecs"),
                 new GitPackage("NetworkTools", "com.exerussus.easyecs.networktools", "https://github.com/exerussus/EasyEcsNetworkTools.git", "Easy Ecs"),
                 new GitPackage("Basic Data", "com.exerussus.basicdata", "https://github.com/exerussus/BasicData.git", "Easy Ecs"),
                 new GitPackage("Movement", "com.exerussus.ecsmodule.movement", "https://github.com/exerussus/ecsmodule-movement.git", "Easy Ecs"),
