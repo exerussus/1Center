@@ -30,6 +30,7 @@ namespace Exerussus._1Center.Editor.Upgrader
             {
                 new GitPackage("NuGet", "com.github-glitchenzo.nugetforunity", "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity"),
                 new GitPackage("1Extensions", "com.exerussus.1extensions", "https://github.com/exerussus/1Extensions.git"),
+                new GitPackage("Game Share", "com.exerussus.gameshare", "https://github.com/exerussus/GameShare.git"),
                 new GitPackage("LitMotion", "com.annulusgames.lit-motion", "https://github.com/annulusgames/LitMotion.git?path=src/LitMotion/Assets/LitMotion"),
                 new GitPackage("1OrganizerUI", "com.exerussus.1organizer-ui", "https://github.com/exerussus/1organizer-ui.git"),
                 new GitPackage("1Services", "com.exerussus.1services", "https://github.com/exerussus/1services.git"),
